@@ -1,1 +1,1 @@
-worker: node kosh-master
+worker: node bot.js
