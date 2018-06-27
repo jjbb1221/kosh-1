@@ -37,7 +37,7 @@ bot.on("message", async message => {
   if(message.channel.type === "dm") return;
 
   let prefixes = botconfig.prefix
-    };
+    });
   }
 
   
