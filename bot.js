@@ -3,7 +3,7 @@ const client = new Discord.Client()
 
 client.on('Ready', () => {
     console.log('I am ready!');
-    client.user.setActivity("With ${client.users.size} Users")
+ client.user.setPresence({ game: { name: 'Serving ${client.guilds.size} servers', type: 1 } });
 });
 
 client.on('message', message => {
