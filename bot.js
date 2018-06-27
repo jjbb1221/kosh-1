@@ -3,6 +3,7 @@ const client = new Discord.Client()
 
 client.on('Ready', () => {
     console.log('I am ready!');
+    client.user.setActivity("With ${client.users.size} Users")
 });
 
 client.on('message', message => {
