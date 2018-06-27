@@ -3,7 +3,7 @@ const client = new Discord.Client()
 const prefix = ("$")
 client.on("ready", () => {
     console.log("[KOSH_PROCESS] [KOSH_BOT] Online!")
-    client.user.setActivity("Serving ${client.guilds.size} servers")
+client.user.setPresence({ game: { name: 'Serving ${client.guilds.size} servers', type: 1 } });
 });
 
 //THIS MUST BE THIS WAY
