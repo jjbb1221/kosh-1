@@ -2,9 +2,9 @@
   "name": "discord.js-heroku",
   "description": "Test",
   "version": "0.0.0",
-  "main": "bot.js",
+  "main": "kosh-master",
   "scripts": {
-    "start": "node bot.js"
+    "start": "node kosh-master"
   },
   "dependencies": {
     "discord.js": "11.1.0",
