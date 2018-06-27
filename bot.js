@@ -1,11 +1,10 @@
 const Discord = require('discord.js');
 const client = new Discord.Client()
-
-client.on('Ready', () => {
-    console.log('[Kosh_PROCESS] [KOSH_BOT] ONLINE');
- client.user.setPresence({ game: { name: 'Serving ${client.guilds.size} servers', type: 1 } });
+const prefix = ("$")
+client.on("ready", () => {
+    console.log("[KOSH_PROCESS] [KOSH_BOT] Online!")
+    client.user.setActivity("Serving ${client.guilds.size} servers")
 });
-
 
 //THIS MUST BE THIS WAY
 client.login(process.env.BOT_TOKEN);
