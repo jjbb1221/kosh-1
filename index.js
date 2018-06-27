@@ -29,7 +29,7 @@ fs.readdir("./commands/", (err, files) => {
 bot.on("ready", async () => {
 
   console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
-  bot.user.setActivity("tutorials on TSC", {type: "WATCHING"});
+  bot.user.setActivity("[$cmds]", {type: "WATCHING"});
 
 });
 
@@ -122,4 +122,4 @@ bot.on("message", async message => {
 
 });
 
-bot.login(tokenfile.token);
+bot.login(process.env.TOKEN);
