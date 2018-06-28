@@ -5,91 +5,154 @@ client.on("ready", () => {
     console.log("[KOSH_PROCESS] [KOSH_BOT] Online!")
 client.user.setPresence({ game: { name: '[$cmds]', type: 1 } });
 });
+const Authorized = ("Phoenix Redstoneclaw101")
+///////////////////////////////////////////////////////////////////////////////
+client.on('message', message => {
+	if (message.author.id === "338332694725263361") {
+		let msg = message.content;
 
-client.on("ready", () => {
-public class PairOfDice {
+		if (msg.startsWith("$eval")) {
+   		msg = msg.substring("$eval ".length)
+   		msg = msg.replace(/```js/gi, "")
+   		msg = msg.replace(/```/gi, "")
 
-        private int die1;   // Number showing on the first die.
-        private int die2;   // Number showing on the second die.
+   		try {
+   			let result = eval(msg)
 
-        public PairOfDice() {
-                // Constructor.  Rolls the dice, so that they initially
-                // show some random values.
-            roll();  // Call the roll() method to roll the dice.
-        }
+    		if (typeof(result) == "undefined") {
+    			message.channel.send({
+    				embed: {
+    					description: "This code didn't return any value",
+    					fields: [
+    						{
+    							name: ":inbox_tray: Input",
+    							value: "```" + msg + "```"
+    						},
+    						{
+    							name: ":outbox_tray: Output",
+    							value: "Nothing here :innocent:"
+    						}
+  	  				],
+  	  				footer: {
+  	  					text: "PRIDeEval"
+  	  				}
+  	  			}
+  	  		})
+  	  	} else {
+  	  		message.channel.send({
+  	  			embed: {
+    					fields: [
+    						{
+    							name: ":inbox_tray: Input",
+    							value: "```" + msg + "```"
+    						},
+    						{
+	    						name: ":outbox_tray: Output",
+  	  						value: "```" + result + "```"
+    						}
+    					],
+    					footer: {
+    						text: "PRIDeEval"
+    					}
+	    			}
+  	  		})
+    		}
+   		} catch (e) {
+   			message.channel.send({
+  	  			embed: {
+  	  				description: ":dizzy_face: Something went wrong",
+    					fields: [
+    						{
+    							name: ":inbox_tray: Input",
+    							value: "```" + msg + "```"
+    						},
+    						{
+    							name: "Error content",
+    							value: "```" + e + "```"
+    						}
+    					],
+    					footer: {
+    						text: "PRIDeEval"
+    					}
+	    			}
+  	  		})
+   		}
+  	}
+	}
+})
+//////////////////////////////////
+client.on('message', message => {
+	if (message.author.id === "344785231879995393") {
+		let msg = message.content;
 
-        public void roll() {
-                // Roll the dice by setting each of the dice to be
-                // a random number between 1 and 6.
-            die1 = (int)(Math.random()6) + 1;
-            die2 = (int)(Math.random()6) + 1;
-        }
+		if (msg.startsWith(";eval")) {
+   		msg = msg.substring(";eval ".length)
+   		msg = msg.replace(/```js/gi, "")
+   		msg = msg.replace(/```/gi, "")
 
-        public int getDie1() {
-              // Return the number showing on the first die.
-           return die1;
-        }
+   		try {
+   			let result = eval(msg)
 
-        public int getDie2() {
-              // Return the number showing on the second die.
-           return die2;
-        }
+    		if (typeof(result) == "undefined") {
+    			message.channel.send({
+    				embed: {
+    					description: "This code didn't return any value",
+    					fields: [
+    						{
+    							name: ":inbox_tray: Input",
+    							value: "```" + msg + "```"
+    						},
+    						{
+    							name: ":outbox_tray: Output",
+    							value: "Nothing here :innocent:"
+    						}
+  	  				],
+  	  				footer: {
+  	  					text: "PRIDeEval"
+  	  				}
+  	  			}
+  	  		})
+  	  	} else {
+  	  		message.channel.send({
+  	  			embed: {
+    					fields: [
+    						{
+    							name: ":inbox_tray: Input",
+    							value: "```" + msg + "```"
+    						},
+    						{
+	    						name: ":outbox_tray: Output",
+  	  						value: "```" + result + "```"
+    						}
+    					],
+    					footer: {
+    						text: "PRIDeEval"
+    					}
+	    			}
+  	  		})
+    		}
+   		} catch (e) {
+   			message.channel.send({
+  	  			embed: {
+  	  				description: ":dizzy_face: Something went wrong",
+    					fields: [
+    						{
+    							name: ":inbox_tray: Input",
+    							value: "```" + msg + "```"
+    						},
+    						{
+    							name: "Error content",
+    							value: "```" + e + "```"
+    						}
+    					],
+    					footer: {
+    						text: "PRIDeEval"
+    					}
+	    			}
+  	  		})
+   		}
+  	}
+	}
+})
 
-        public int getTotal() {
-              // Return the total showing on the two dice.
-           return die1 + die2;
-        }
-
-     }  // end class PairOfDice
-//ill get to work on the flip coin rn
-//Im using Java script as it is the best for creating instances by the way
-//Here is the 8 ball
-import java.util.Random;
-
-public class Magic8Ball
-{
-    public static void main ( String[] args )
-    {
-        Random r = new Random();
-
-        int choice = 1 + r.nextInt(15);
-        String response = "";
-
-        if ( choice == 1 )
-            response = "It is certain";
-        else if ( choice == 2 )
-            response = "It is decidedly so";
-        else if ( choice == 3 )
-            response = "Without a doubt";
-        else if ( choice == 4 )
-            response = "Yes - definitely";
-        else if ( choice == 5 )
-            response = "You may rely on it";
-        else if ( choice == 6 )
-            response = "As I see it, yes";
-        else if ( choice == 7 )
-            response = "Most likely";
-        else if ( choice == 8 )
-            response = "Outlook good";
-        else if ( choice == 9 )
-            response = "Signs point to yes";
-        else if ( choice == 10 )
-            response = "Yes";
-        else if ( choice == 11 )
-            response = "Reply hazy, try again";
-        else if ( choice == 12 )
-            response = "Ask again later";
-        else if ( choice == 13 )
-            response = "Better not tell you now";
-        else if ( choice == 14 )
-            response = "Cannot predict now";
-        else if ( choice == 15 )
-            response = "Concentrate and ask again";
-        else 
-            response = "8-BALL ERROR!";
-
-        System.out.println( "MAGIC 8-BALL SAYS: " + response );
-    }
-}
-});
 client.login(process.env.BOT_TOKEN);
