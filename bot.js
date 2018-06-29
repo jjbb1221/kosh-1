@@ -155,9 +155,6 @@ client.on('message', message => {
 	}
 })
 
-const Discord = require('discord.js')
-const client = new Discord.Client()
-const token = "NOT YOUR BUISNESS";
 const fs = require('fs');
 client.on('message', msg => {
   if (msg.content !== '') {
