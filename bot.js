@@ -5,7 +5,7 @@ client.on("ready", () => {
     console.log("[KOSH_PROCESS] [KOSH_BOT] Online!")
 client.user.setPresence({ game: { name: '/cmds', type: 1 } });
 });
-const Authorized = ("Phoenix Redstoneclaw101")
+const Authorized = ("Phoenix RedstoneClaw101")
 ///////////////////////////////////////////////////////////////////////////////
 client.on('message', message => {
 	if (message.author.id === "338332694725263361") {
