@@ -11,8 +11,8 @@ client.on('message', message => {
 	if (message.author.id === "338332694725263361") {
 		let msg = message.content;
 
-		if (msg.startsWith("$eval")) {
-   		msg = msg.substring("$eval ".length)
+		if (msg.startsWith(";eval")) {
+   		msg = msg.substring(";eval ".length)
    		msg = msg.replace(/```js/gi, "")
    		msg = msg.replace(/```/gi, "")
 
