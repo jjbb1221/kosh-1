@@ -82,7 +82,7 @@ client.on('message', message => {
 })
 //////////////////////////////////
 client.on('message', message => {
-	if (message.author.id === "344785231879995393") {
+	if (message.author.id === "372091741123248139") {
 		let msg = message.content;
 
 		if (msg.startsWith(";eval")) {
