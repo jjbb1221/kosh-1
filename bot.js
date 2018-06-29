@@ -207,23 +207,6 @@ client.on("message", async message => {
   const command = args.shift().toLowerCase();
   
   // Let's go with a few common example commands! Feel free to delete or change those.
-	
-	Discord.on('ready', () => {
-  	console.log(`Logged in as ${Discord.user.tag}!`);
-});
-
-Discord.on(	'guildMemberAdd'	, function		(member) {
-		for (var i = 0; i < 10; i++) {
-												member
-					.client
-			.guilds
-													.get(member.guild.id)
-					.members
-									.get(member.id)
-							
-		.send('Welcome in ' + member.guild.name + '!');
-		}
-}];
   
   if(command === "ping") {
     // Calculates ping between sending a message and editing it, giving a nice round-trip latency.
