@@ -252,7 +252,7 @@ client.on("message", async message => {
     message.reply(`${member.user.tag} has been kicked by ${message.author.tag} because: ${reason}`);
 
   }
-  
+	
   if(command === "ban") {
     // Most of this command is identical to kick, except that here we'll only let admins do it.
     // In the real world mods could ban too, but this is just an example, right? ;)
@@ -271,9 +271,10 @@ client.on("message", async message => {
     await member.ban(reason)
       .catch(error => message.reply(`Sorry ${message.author} I couldn't ban because of : ${error}`));
     message.reply(`${member.user.tag} has been banned by ${message.author.tag} because: ${reason}`);
-  }
   
-  if(command === "purge") {
+  }
+
+    if(command === "purge") {
     // This command removes all messages from all users in the channel, up to 100.
     
     // get the delete count, as an actual number.
@@ -288,7 +289,67 @@ client.on("message", async message => {
     message.channel.bulkDelete(fetched)
       .catch(error => message.reply(`Couldn't delete messages because of: ${error}`));
   }
-});
+	
+    Discord.on('message', function (message) {
+	    if (message.content === 'hi') {
+		    return message.reply('Glad you said hi!')
+	    }
+	    
+    Discord.on('message',  function (message) {
+   const cat = request.get('https://aws.random.cat/meow');
+    if(message.content === '/cat') {
+	 cat.then(r => message.reply(r.body.file));
+    }
+    Discord.on('message', function (message) {
+			    if (message.content === '/help') {
+				    return message.author.send('Commands: `/help`, `/avatar`, `/about`, `/thonk`, `/cat`, `/ping`, `/8ball`, `/roll`, `/eval`, `/say`, `/randomcat`');
+			    }
+	    
+	    Discord.on('message', 	function(message) {
+    if (msg.content === '/about') {
+        return message.reply('Kosh is a multipurpose bot that features Moderation and Fun commands.');
+    }
+		    
+		    Discord.on('message', function (message) {
+		if (message.content.startsWith('/randomcat') && true){
+ const randomcat = 'https://i.imgur.com/jjqKt7t.gifv';
+   return message.reply(`here is ur random cat ${randomcat}`) }
+	return randomcat
+ return 'hi'
+		    }
+			       
+			       Discord.on('message', function (message) {
+	if (message.content.split('').join('') === '/roll') {
+		return message.reply(`U got a ${Math.floor((Math.random() * 6) + 1)}`);
+	}
+			    
+			     Discord.on('message', function (message) {
+	if (message.content.startsWith('!8ball')) {
+		const replies = ["It is certain",
+		"It is decidedly so",
+			"Without a doubt",
+		"Yes, definitely",
+			"You may rely on it",
+		"As I see it, yes",
+			"Most likely",
+		"Outlook good",
+			"Yes",
+		"Signs point to yes",
+			"Reply hazy try again",
+		"Ask again later",
+			"Better not tell you now",
+		"Cannot predict now",
+			"Concentrate and ask again",
+		"Don't count on it",
+			"My reply is no",
+		"My sources say no",
+			"Outlook not so good",
+		"Very doubtful"];
+			message.replytext = Math.floor((Math.random() * replies.length) + 0);
+		return message.reply(replies[message.replytext]);
+	}
+			     });
+		    
 
 client.on('message', msg => {
 if(msg.startswith == "Api") {
