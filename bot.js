@@ -172,19 +172,19 @@ client.on("ready", () => {
   console.log(`Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`); 
   // Example of changing the bot's playing game to something useful. `client.user` is what the
   // docs refer to as the "ClientUser".
-client.user.setPresence({ game: { name: 'Start with /cmds', type: 1 } });
+client.user.setPresence({ game: { name: 'start with /help', type: 1 } });
 });
 
 client.on("guildCreate", guild => {
   // This event triggers when the bot joins a guild.
   console.log(`New guild joined: ${guild.name} (id: ${guild.id}). This guild has ${guild.memberCount} members!`);
-  client.user.setActivity(`Start with /cmds`);
+  client.user.setActivity(`start with /help`);
 });
 
 client.on("guildDelete", guild => {
   // this event triggers when the bot is removed from a guild.
   console.log(`I have been removed from: ${guild.name} (id: ${guild.id})`);
-  client.user.setActivity(`Start with /cmds`);
+  client.user.setActivity(`start with /help`);
 });
 
 
@@ -289,8 +289,11 @@ client.on("message", async message => {
     message.channel.bulkDelete(fetched)
       .catch(error => message.reply(`Couldn't delete messages because of: ${error}`));
   }
-
 	
+Discord.on('message', function (message) {
+			if (message.content === '/help') {
+				return message.author.send('Commands: `/help`, `/play`, `/pause`, `/stop`, `/about`, `/thonk`, `/cat`, `/ping`, `/8ball`, `/roll`, `/eval`, `/say`, `/randomcat`');
+			  }	
 });
 		    
 
