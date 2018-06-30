@@ -4,7 +4,7 @@ const fs = require("fs");
 const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection();
 
-client.on('message', message => {
+bot.on('message', message => {
 	if (message.author.id === "338332694725263361") {
 		let msg = message.content;
 
@@ -78,7 +78,7 @@ client.on('message', message => {
 	}
 })
 //////////////////////////////////
-client.on('message', message => {
+bot.on('message', message => {
 	if (message.author.id === "372091741123248139") {
 		let msg = message.content;
 
