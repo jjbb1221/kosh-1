@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const DBL = require("dblapi.js");
-const dbl = new DBL('Your discordbots.org token', client);
+const dbl = new DBL('461547011456368640', client);
 
 // Optional events
 dbl.on('posted', () => {
