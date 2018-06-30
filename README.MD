@@ -4,6 +4,8 @@
   <img src="https://discordbots.org/api/widget/461547011456368640.svg" alt="Kosh" />
 </a>
 
+https://discordbots.org/api/widget/461547011456368640.svg?usernamecolor=FFFFFF&topcolor=000000
+
 Kosh Systems is a Multipurpose bot for Discord. This is the official documentation of our bot.
 
 # Commands
