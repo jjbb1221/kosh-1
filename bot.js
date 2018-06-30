@@ -208,11 +208,14 @@ client.on("message", async message => {
   
   // Let's go with a few common example commands! Feel free to delete or change those.
   
-  client.on("message", message => {
+ client.on("message", message => {
     if (message.author.id === client.user.id) || (message.author != message.guild.owner) return;
         if(message.content == "ping") {
             message.reply("pong!")
-  }
+        }
+    }
+})
+
   
   if(command === "say") {
     // makes the bot say something and delete the message. As an example, it's open to anyone to use. 
