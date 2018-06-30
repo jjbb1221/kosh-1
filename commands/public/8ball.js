@@ -22,3 +22,4 @@
 		"Very doubtful"];
 			message.replytext = Math.floor((Math.random() * replies.length) + 0);
 		return message.reply(replies[message.replytext]);
+	}
