@@ -214,32 +214,6 @@ client.on("message", async message => {
     const m = await message.channel.send("Ping?");
     m.edit(`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
   }
-
- Discord.on('message', function (message) {
-	if (message.content.startsWith('/8ball')) {
-		const replies = ["It is certain",
-		"It is decidedly so",
-			"Without a doubt",
-		"Yes, definitely",
-			"You may rely on it",
-		"As I see it, yes",
-			"Most likely",
-		"Outlook good",
-			"Yes",
-		"Signs point to yes",
-			"Reply hazy try again",
-		"Ask again later",
-			"Better not tell you now",
-		"Cannot predict now",
-			"Concentrate and ask again",
-		"Don't count on it",
-			"My reply is no",
-		"My sources say no",
-			"Outlook not so good",
-		"Very doubtful"];
-			message.replytext = Math.floor((Math.random() * replies.length) + 0);
-		return message.reply(replies[message.replytext]);
-	}
 	 
   if(command === "say") {
     // makes the bot say something and delete the message. As an example, it's open to anyone to use. 
