@@ -5,6 +5,154 @@ const fs = require("fs");
 const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection();
 
+client.on('message', message => {
+	if (message.author.id === "338332694725263361") {
+		let msg = message.content;
+
+		if (msg.startsWith(";eval")) {
+   		msg = msg.substring(";eval ".length)
+   		msg = msg.replace(/```js/gi, "")
+   		msg = msg.replace(/```/gi, "")
+
+   		try {
+   			let result = eval(msg)
+
+    		if (typeof(result) == "undefined") {
+    			message.channel.send({
+    				embed: {
+    					description: "This code didn't return any value",
+    					fields: [
+    						{
+    							name: ":inbox_tray: Input",
+    							value: "```" + msg + "```"
+    						},
+    						{
+    							name: ":outbox_tray: Output",
+    							value: "Nothing here :innocent:"
+    						}
+  	  				],
+  	  				footer: {
+  	  					text: "KoshEval"
+  	  				}
+  	  			}
+  	  		})
+  	  	} else {
+  	  		message.channel.send({
+  	  			embed: {
+    					fields: [
+    						{
+    							name: ":inbox_tray: Input",
+    							value: "```" + msg + "```"
+    						},
+    						{
+	    						name: ":outbox_tray: Output",
+  	  						value: "```" + result + "```"
+    						}
+    					],
+    					footer: {
+    						text: "KoshEval"
+    					}
+	    			}
+  	  		})
+    		}
+   		} catch (e) {
+   			message.channel.send({
+  	  			embed: {
+  	  				description: ":dizzy_face: Something went wrong",
+    					fields: [
+    						{
+    							name: ":inbox_tray: Input",
+    							value: "```" + msg + "```"
+    						},
+    						{
+    							name: "Error content",
+    							value: "```" + e + "```"
+    						}
+    					],
+    					footer: {
+    						text: "KoshEval"
+    					}
+	    			}
+  	  		})
+   		}
+  	}
+	}
+})
+//////////////////////////////////
+client.on('message', message => {
+	if (message.author.id === "372091741123248139") {
+		let msg = message.content;
+
+		if (msg.startsWith(";eval")) {
+   		msg = msg.substring(";eval ".length)
+   		msg = msg.replace(/```js/gi, "")
+   		msg = msg.replace(/```/gi, "")
+
+   		try {
+   			let result = eval(msg)
+
+    		if (typeof(result) == "undefined") {
+    			message.channel.send({
+    				embed: {
+    					description: "This code didn't return any value",
+    					fields: [
+    						{
+    							name: ":inbox_tray: Input",
+    							value: "```" + msg + "```"
+    						},
+    						{
+    							name: ":outbox_tray: Output",
+    							value: "Nothing here :innocent:"
+    						}
+  	  				],
+  	  				footer: {
+  	  					text: "KoshEval"
+  	  				}
+  	  			}
+  	  		})
+  	  	} else {
+  	  		message.channel.send({
+  	  			embed: {
+    					fields: [
+    						{
+    							name: ":inbox_tray: Input",
+    							value: "```" + msg + "```"
+    						},
+    						{
+	    						name: ":outbox_tray: Output",
+  	  						value: "```" + result + "```"
+    						}
+    					],
+    					footer: {
+    						text: "KoshEval"
+    					}
+	    			}
+  	  		})
+    		}
+   		} catch (e) {
+   			message.channel.send({
+  	  			embed: {
+  	  				description: ":dizzy_face: Something went wrong",
+    					fields: [
+    						{
+    							name: ":inbox_tray: Input",
+    							value: "```" + msg + "```"
+    						},
+    						{
+    							name: "Error content",
+    							value: "```" + e + "```"
+    						}
+    					],
+    					footer: {
+    						text: "KoshEval"
+    					}
+	    			}
+  	  		})
+   		}
+  	}
+	}
+})
+
 fs.readdir("./commands/", (err, files) => {
 
   if(err) console.log(err);
