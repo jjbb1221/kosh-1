@@ -184,12 +184,12 @@ client.on('message', message => {
     if (message.content === prefix +'Cmds') {
         var embed = new Discord.RichEmbed();
     embed.setTitle('Cmds')
-      embed.setDescription(`Shows Cmds For SusThink`);
+      embed.setDescription(`Shows Cmds For Kosh`);
       embed.setColor('#009000');
       embed.addField('Cmds: Cmds [Shows This Message] Ping [Shows A Response Time] Eval [Only Authorized People Can Do This] serverinfo [shows server info] Botinfo [Shows  Bot info nothing else] Kick [Kicks a member]');
       embed.addField('Vips: None :(')
-      embed.addField('For More Information Please Contact a Owner Of SusThink')
-      embed.setFooter("We Hope You Enjoy Your Time With SusThink ")
+      embed.addField('For More Information Please Contact a Owner Of Kosh')
+      embed.setFooter("We Hope You Enjoy Your Time With Kosh ")
       embed.setTimestamp()
     
       message.channel.sendEmbed(embed);
@@ -266,7 +266,7 @@ message.channel.sendMessage(message.channel.send(`= STATISTICS =
 client.on('message', message => {
     if (message.content.startsWith(prefix + "speach")) {
 	    let kickChannel = message.guild.channels.find(`name`, "announcements");
-message.kickChannel.send("Hey i am SusThink Say Hi!")
+message.kickChannel.send("Hey i am Kosh Say Hi!")
 
 	}
 	})
