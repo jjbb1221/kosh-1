@@ -189,7 +189,7 @@ client.on('message', message => {
       embed.addField('Cmds: Cmds [Shows This Message] Ping [Shows A Response Time] Eval [Only Authorized People Can Do This] serverinfo [shows server info] Botinfo [Shows  Bot info nothing else] Kick [Kicks a member]');
       embed.addField('Vips: None :(')
       embed.addField('For More Information Please Contact a Owner Of Kosh')
-      embed.setFooter("We Hope You Enjoy Your Time With Kosh")
+      embed.setFooter("Kosh Systems | V3")
       embed.setTimestamp()
     
       message.channel.sendEmbed(embed);
