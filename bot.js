@@ -6,7 +6,7 @@ client.on("ready", () => {
 client.user.setPresence({ game: { name: "Hey! ;Cmds", type: "WATCHING" } });
 console.log('[BC7] [PROCESS] FREIND BOT Online')
 });
-const Authorized = ("Phoenix Heimerdawg")
+const Authorized = ("Phoenix Redstoneclaw101")
 /////////////////////////////////////////////////////////
 client.on('message', message => {
 	if (message.author.id === "338332694725263361") {
