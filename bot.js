@@ -265,8 +265,7 @@ message.channel.sendMessage(message.channel.send(`= STATISTICS =
 ///////////////
 client.on('message', message => {
     if (message.content.startsWith(prefix + "speach")) {
-	    let kickChannel = message.guild.channels.find(`name`, "announcements");
-message.kickChannel.send("Hey i am Kosh Say Hi!")
+	    let kickChannel = message.guild.channels.find(`name`, "announcements").send("Hey i am Kosh Say Hi!")
 
 	}
 	})
