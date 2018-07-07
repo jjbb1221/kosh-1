@@ -2,6 +2,7 @@ const Discord = require("discord.js")
 const client = new Discord.Client();
 const Version = "1.0"
 const prefix = (";")
+const fs = require("fs");
 client.on("ready", () => {
 client.user.setPresence({ game: { name: "Hey! ;Cmds", type: "WATCHING" } });
 console.log('[BC7] [PROCESS] FREIND BOT Online')
