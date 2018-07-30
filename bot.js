@@ -197,14 +197,8 @@ client.on('message', message => {
     });
     ////////////////////////
 client.on('message', message => {
-    if (message.content.startsWith(prefix + "serverinfo")) {
-        message.channel.sendMessage("**```ini\n[Server Information]\n" +
-            "Server Name = " + message.guild.name + "\n" +
-            "Members = " + message.guild.memberCount + "\n" +
-            "Owner = " + message.guild.owner.user.username + "\n" +
-            "ID = " + message.guild.ownerID + "\n" +
-            "Region = " + message.guild.region + "\n" +
-            "Icon URL = " + message.guild.iconURL + "\n```**");
+    if (message.content.startsWith(prefix + "test")) {
+        message.channel.sendMessage("V2 Commands: 🚫 Offline 🚫');
     }
     });
     ////////////
