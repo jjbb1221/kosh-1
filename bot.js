@@ -169,8 +169,7 @@ client.on('message', message => {
     
         return message.channel.send(botembed);
       }
-    
-});
+      });
 ///////////////////////
 client.on('message', message => {
     if (message.content === prefix +'Ping') {
@@ -182,14 +181,14 @@ client.on('message', message => {
 });
 ///////////////////
 client.on('message', message => {
-    if (message.content === prefix +'Cmds') {
+    if (message.content === prefix +'donate') {
         var embed = new Discord.RichEmbed();
-    embed.setTitle('Cmds')
-      embed.setDescription(`Shows Cmds For Kosh`);
+    embed.setTitle('Kosh Donation Panel')
+      embed.setDescription(`Thank you for donating to Kosh!');
       embed.setColor('#009000');
-      embed.addField('Cmds: Cmds [Shows This Message] Ping [Shows A Response Time] Eval [Only Authorized People Can Do This] serverinfo [shows server info] Botinfo [Shows  Bot info nothing else] Kick [Kicks a member]');
-      embed.addField('Vips: None :(')
-      embed.addField('For More Information Please Contact a Owner Of Kosh')
+      embed.addField('Our team thanks you for donating to Kosh, this allows us to work on Kosh and release more features more swiftly.');
+      embed.addField('To donate, go to the server below.')
+      embed.addField('https://discord.gg/Tyf7RsB')
       embed.setFooter("Kosh Systems | V3")
       embed.setTimestamp()
     
@@ -210,10 +209,10 @@ client.on('message', message => {
     });
     ////////////
 client.on('message', message => {
-    if (message.content.startsWith(prefix + "assistant")) {
-        message.channel.sendMessage("Senior what would you like me to do?");
+    if (message.content.startsWith(prefix + "help")) {
+        message.channel.sendMessage("Kosh Help Hotline: Type stats, support, commands, or donate to continue.");
 }
-    if (message.content.startsWith("Stats")) {
+    if (message.content.startsWith("stats")) {
         message.channel.sendMessage("Displaying Diagnostics")
         message.channel.sendMessage("==DIAGNOSTICS==")
 message.channel.sendMessage(message.channel.send(`= STATISTICS =
@@ -221,7 +220,6 @@ message.channel.sendMessage(message.channel.send(`= STATISTICS =
 • Users   :: ${(client.users.size)}
 • Node       :: ${process.version}`, {code: 'asciidoc'}))}
     });
-    
     /////////////////////
     client.on('message', message => {
     if (message.content.startsWith(prefix + "Stats")) {
@@ -265,8 +263,8 @@ message.channel.sendMessage(message.channel.send(`= STATISTICS =
 );
 ///////////////
 client.on('message', message => {
-    if (message.content.startsWith(prefix + "speach")) {
-	    let kickChannel = message.guild.channels.find(`name`, "announcements").send("Hey i am Kosh Say Hi!")
+    if (message.content.startsWith(prefix + "notice")) {
+	    let kickChannel = message.guild.channels.find(`name`, "announcements").send("Kosh Systems is running in this server. Type ;help to begin!")
 
 	}
 	})
