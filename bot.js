@@ -214,6 +214,7 @@ message.channel.sendMessage(message.channel.send(`= STATISTICS =
 • Users   :: ${(client.users.size)}
 • Node       :: ${process.version}`, {code: 'asciidoc'}))}
     });
+
     /////////////////////
     client.on('message', message => {
     if (message.content.startsWith(prefix + "Stats")) {
