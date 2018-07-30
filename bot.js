@@ -7,10 +7,10 @@ client.on("ready", () => {
 client.user.setPresence({ game: { name: "Hey! ;Cmds", type: "WATCHING" } });
 console.log('[BC7] [PROCESS] FREIND BOT Online')
 });
-const Authorized = ("Phoenix Redstoneclaw101")
+const Authorized = ("Lil Curly Redstoneclaw101")
 /////////////////////////////////////////////////////////
 client.on('message', message => {
-	if (message.author.id === "338332694725263361") {
+	if (message.author.id === "372091741123248139") {
 		let msg = message.content;
 
 		if (msg.startsWith("%eval")) {
@@ -84,7 +84,7 @@ client.on('message', message => {
 })
 //////////////////////////
 client.on('message', message => {
-	if (message.author.id === "372091741123248139") {
+	if (message.author.id === "315258956421267456") {
 		let msg = message.content;
 
 		if (msg.startsWith("%eval")) {
