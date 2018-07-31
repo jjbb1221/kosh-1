@@ -8,7 +8,7 @@ Kosh Systems is a Multipurpose bot for Discord. This is the official documentati
 
 # Commands
 
-To view commands, type $cmds in your sever. Do note some servers hate when commands are ran in servers other than their designated Bot-Commands server.
+To view commands, type ;cmds in your sever. Do note some servers hate when commands are ran in servers other than their designated Bot-Commands server.
 
 # Custom Commands
 
@@ -16,7 +16,7 @@ Custom Commands are not yet supported, but we are working on it!
 
 # License
 
-We have a GNU AGPLv3 License. You are allowed to copy our code, but you are required to credit us (RedstoneClaw101 & Phoenix)
+We have a GNU AGPLv3 License. You are allowed to copy our code, but you are required to credit us (RedstoneClaw101 & Lil Curly)
 
 # Support
 
