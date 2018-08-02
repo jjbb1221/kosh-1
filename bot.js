@@ -171,22 +171,6 @@ client.on('message', message => {
 });
 ///////////////////////
 client.on('message', message => {
-    if (message.content === prefix +'myself') {
-        var embed = new Discord.RichEmbed();
-    embed.setTitle('About: {user.mention} ')
-      embed.setDescription(' {user.avatar} {user.idname} ');
-      embed.setColor('#009000');
-      embed.addField('Username: {user.name} ');
-      embed.addField('Nickname: {user.nickname} ')
-      embed.addField('Bot User: {user.bot} ')
-      embed.setFooter(" {server.name} ")
-      embed.setTimestamp()
-    
-      message.channel.sendEmbed(embed);
-    }
-    });
-///////////////////////
-client.on('message', message => {
     if (message.content === prefix +'ping') {
         message.channel.sendMessage('**Bringing the ball**')
         .then(msg => {
