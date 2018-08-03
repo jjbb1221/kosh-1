@@ -173,7 +173,7 @@ client.on('message', message => {
 client.on('message', message => {	
     if (message.content === prefix +'myself') {	
         var embed = new Discord.RichEmbed();	
-    embed.setTitle('About: {user.mention} ')	
+    embed.setTitle('About: /users/@me ')	
       embed.setDescription(' {user.avatar} {user.idname} ');	
       embed.setColor('#009000');	
       embed.addField('Username: {user.name} ');	
