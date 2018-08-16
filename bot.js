@@ -205,21 +205,19 @@ client.on('message', message => {
     if (message.content.startsWith(prefix + "support")) {
         message.channel.sendMessage("Toasty Support Hotline: Run serverstats, requesthelp, or donate to continue.");
 }
-    if (message.content.startsWith("serverstats")) {
-        message.channel.sendMessage("Displaying Diagnostics")
-        message.channel.sendMessage("==DIAGNOSTICS==")
-message.channel.sendMessage(message.channel.send(`= STATISTICS =
-• Mem Usage  :: ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB
-• Users   :: ${(client.users.size)}
-• Node       :: ${process.version}`, {code: 'asciidoc'}))}
-} 	
     if (message.content.startsWith("requesthelp")) {
         message.channel.sendMessage("@Administrative Department help required. Please assist. If nobody is online ask someone in the @Active role.");
-}
-	if (message.content.startsWith("donate")) {
+}	
+    if (message.content.startsWith("donate")) {
         message.channel.sendMessage("We rely on donors to continue giveaways. Visit #donate for more information.");
-	}
-    });	
+}
+    if (message.content.startsWith("serverstats")) {
+        message.channel.send(`= STATISTICS =
+      • Mem Usage  :: ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB
+      • Users      :: $client.users.size + "\n" +
+      • Node       :: ${process.version}`, {code: 'asciidoc'});
+    }
+    });
     /////////////////////
     client.on('message', message => {
     if (message.content.startsWith(prefix + "stats")) {
