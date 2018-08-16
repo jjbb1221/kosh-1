@@ -209,7 +209,7 @@ client.on('message', message => {
         message.channel.sendMessage("@Administrative Department help required. Please assist. If nobody is online ask someone in the @Active role.");
 }	
     if (message.content.startsWith("donate")) {
-        message.channel.sendMessage("We rely on donors to continue giveaways. Visit #donate for more information.");
+        message.channel.sendMessage("We rely on donors to continue giveaways. Visit the donate channel for more information.");
 }
     if (message.content.startsWith("serverstats")) {
         message.channel.send(`= STATISTICS =
@@ -262,7 +262,7 @@ client.on('message', message => {
 ///////////////
 client.on('message', message => {
     if (message.content.startsWith(prefix + "welcome")) {
-	    let kickChannel = message.guild.channels.find(`name`, "announcements").send("We thank you for being in Toasty Giveaways. Run ;start to begin! :joy:")
+	    let kickChannel = message.guild.channels.find(`name`, "announcements").send("We thank you for being in Toasty Giveaways. Run ;start to begin! :joy:");
 
 	}
 	})
