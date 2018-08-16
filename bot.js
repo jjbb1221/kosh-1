@@ -1,7 +1,7 @@
 const Discord = require("discord.js")
 const client = new Discord.Client();
 const Version = "1.0"
-const prefix = ("-")
+const prefix = (";")
 client.on("ready", () => {
 client.user.setPresence({ game: { name: "Hey! ;Cmds", type: "WATCHING" } });
 console.log('[BC7] [PROCESS] FREIND BOT Online')
@@ -196,46 +196,30 @@ client.on('message', message => {
 });
 ///////////////////
 client.on('message', message => {
-    if (message.content === prefix +'cmds') {
-        var embed = new Discord.RichEmbed();
-    embed.setTitle('Command Panel')
-      embed.setDescription(`Opened using ;cmds`);
-      embed.setColor('#009000');
-      embed.addField('Cmds: help [Shows This Message] ping [Shows A Response Time] eval [Only Authorized People Can Do This] serverinfo [shows server info] botinfo [Shows  Bot info nothing else] kick [Kicks a member]');
-      embed.addField('Make sure to run ;support to donate!')
-      embed.addField('Not all commands are shown.')
-      embed.setFooter("Kosh Original")
-      embed.setTimestamp()
-    
-      message.channel.sendEmbed(embed);
-    }
-    });
-    ////////////////////////
-client.on('message', message => {
-    if (message.content.startsWith(prefix + "serverinfo")) {
-        message.channel.sendMessage("**```ini\n[Server Information]\n" +
-            "Server Name = " + message.guild.name + "\n" +
-            "Members = " + message.guild.memberCount + "\n" +
-            "Owner = " + message.guild.owner.user.username + "\n" +
-            "ID = " + message.guild.ownerID + "\n" +
-            "Region = " + message.guild.region + "\n" +
-            "Icon URL = " + message.guild.iconURL + "\n```**");
-    }
-    });
+    if (message.content.startsWith(prefix + "start")) {
+        message.channel.sendMessage("Toasty Giveaways is a server that gives free stuff just for fun! You will have a chance of winning a variety of things here. Run ;support for help.
+				  
+       
     ////////////
 client.on('message', message => {
-    if (message.content.startsWith(prefix + "console")) {
-        message.channel.sendMessage("What process shall I run?");
+    if (message.content.startsWith(prefix + "support")) {
+        message.channel.sendMessage("Toasty Support Hotline: Run serverstats, requesthelp, or donate to continue.");
 }
-    if (message.content.startsWith("Stats")) {
+    if (message.content.startsWith("serverstats")) {
         message.channel.sendMessage("Displaying Diagnostics")
         message.channel.sendMessage("==DIAGNOSTICS==")
 message.channel.sendMessage(message.channel.send(`= STATISTICS =
 • Mem Usage  :: ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB
 • Users   :: ${(client.users.size)}
 • Node       :: ${process.version}`, {code: 'asciidoc'}))}
-    });
-    
+} 	
+    if (message.content.startsWith("requesthelp")) {
+        message.channel.sendMessage("@Administrative Department help required. Please assist. If nobody is online ask someone in the @Active role.");
+}
+	if (message.content.startsWith("donate")) {
+        message.channel.sendMessage("We rely on donors to continue giveaways. Visit #donate for more information.");
+	}
+    });	
     /////////////////////
     client.on('message', message => {
     if (message.content.startsWith(prefix + "stats")) {
@@ -279,8 +263,8 @@ message.channel.sendMessage(message.channel.send(`= STATISTICS =
 );
 ///////////////
 client.on('message', message => {
-    if (message.content.startsWith(prefix + "about")) {
-	    let kickChannel = message.guild.channels.find(`name`, "announcements").send("Kosh is now online. Run ;help to begin! :joy:")
+    if (message.content.startsWith(prefix + "welcome")) {
+	    let kickChannel = message.guild.channels.find(`name`, "announcements").send("We thank you for being in Toasty Giveaways. Run ;start to begin! :joy:")
 
 	}
 	})
