@@ -214,7 +214,6 @@ client.on('message', message => {
     if (message.content.startsWith("serverstats")) {
         message.channel.send(`= STATISTICS =
       • Mem Usage  :: ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB
-      • Users      :: $client.users.size + "\n" +
       • Node       :: ${process.version}`, {code: 'asciidoc'});
     }
     });
@@ -223,7 +222,6 @@ client.on('message', message => {
     if (message.content.startsWith(prefix + "stats")) {
         message.channel.send(`= STATISTICS =
       • Mem Usage  :: ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB
-      • Users      :: $client.users.size + "\n" +
       • Node       :: ${process.version}`, {code: 'asciidoc'});
     }
     });
