@@ -197,9 +197,9 @@ client.on('message', message => {
 ///////////////////
 client.on('message', message => {
     if (message.content.startsWith(prefix + "start")) {
-        message.channel.sendMessage("Toasty Giveaways is a server that gives free stuff just for fun! You will have a chance of winning a variety of things here. Run ;support for help.
-				  
-       
+        message.channel.sendMessage("Toasty Giveaways is a server that gives free stuff just for fun! You will have a chance of winning a variety of things here. Run ;support for help.");				
+    }
+    });
     ////////////
 client.on('message', message => {
     if (message.content.startsWith(prefix + "support")) {
