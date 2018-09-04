@@ -172,7 +172,7 @@ client.on('message', message => {
 ///////////////////////
 client.on('message', message => {	
     if (message.content === prefix +'verify') {	
-        message.channel.sendMessage('Welcome to Toasty Community. You are now verified.')
+        message.channel.sendMessage('Welcome to Toasty Community, ${user}! You are now verified.')
     }	
     });	
 ///////////////////////
