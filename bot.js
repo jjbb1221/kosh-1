@@ -172,17 +172,7 @@ client.on('message', message => {
 ///////////////////////
 client.on('message', message => {	
     if (message.content === prefix +'myself') {	
-        var embed = new Discord.RichEmbed();	
-    embed.setTitle('About: /users/@me ')	
-      embed.setDescription(' {user.avatar} {user.idname} ');	
-      embed.setColor('#009000');	
-      embed.addField('Username: {user.name} ');	
-      embed.addField('Nickname: {user.nickname} ')	
-      embed.addField('Bot User: {user.bot} ')	
-      embed.setFooter(" {server.name} ")	
-      embed.setTimestamp()	
-    	
-      message.channel.sendEmbed(embed);	
+        message.channel.sendMessage('Welcome to Toasty Community. You are now verified.')
     }	
     });	
 ///////////////////////
