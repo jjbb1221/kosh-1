@@ -6,10 +6,10 @@ client.on("ready", () => {
 client.user.setPresence({ game: { name: "Hey! ;Cmds", type: "WATCHING" } });
 console.log('[BC7] [PROCESS] FREIND BOT Online')
 });
-const Authorized = ("Lil Curly Redstoneclaw101")
+const Authorized = ("LightBoltex")
 /////////////////////////////////////////////////////////
 client.on('message', message => {
-	if (message.author.id === "315258956421267456") {
+	if (message.author.id === "372091741123248139") {
 		let msg = message.content;
 
 		if (msg.startsWith("%eval")) {
@@ -172,7 +172,13 @@ client.on('message', message => {
 ///////////////////////
 client.on('message', message => {	
     if (message.content === prefix +'verify') {	
-        message.channel.sendMessage('Welcome to the Toasty Community! You are now verified.')
+        message.channel.sendMessage('Welcome to our USA! You are now verified on our database.')
+    }	
+    });	
+///////////////////////
+client.on('message', message => {	
+    if (message.content === prefix +'cmds') {	
+        message.channel.sendMessage('Commands: ;verify, ;ping, ;support, ;botinfo, ;start, ;stats. More on the way!')
     }	
     });	
 ///////////////////////
@@ -187,19 +193,19 @@ client.on('message', message => {
 ///////////////////
 client.on('message', message => {
     if (message.content.startsWith(prefix + "start")) {
-        message.channel.sendMessage("Toasty Giveaways is a server that gives free stuff just for fun! You will have a chance of winning a variety of things here. Run ;support for help.");				
+        message.channel.sendMessage("Thank you for joining [USA] :| United States of America discord! Run ;support for help.");				
     }
     });
     ////////////
 client.on('message', message => {
     if (message.content.startsWith(prefix + "support")) {
-        message.channel.sendMessage("Toasty Support Hotline: Run serverstats, requesthelp, or donate to continue.");
+        message.channel.sendMessage("USA Support Hotline: Run serverstats, requesthelp, or donate to continue.");
 }
     if (message.content.startsWith("requesthelp")) {
-        message.channel.sendMessage("@Administrative Department help required. Please assist. If nobody is online ask someone in the @Active role.");
+        message.channel.sendMessage("Sent request... If nobody is online ask someone who is online!");
 }	
     if (message.content.startsWith("donate")) {
-        message.channel.sendMessage("We rely on donors to continue giveaways. Visit the donate channel for more information.");
+        message.channel.sendMessage("Donate by buying an idem in the #store channel!");
 }
     if (message.content.startsWith("serverstats")) {
         message.channel.send(`= STATISTICS =
@@ -249,9 +255,8 @@ client.on('message', message => {
 );
 ///////////////
 client.on('message', message => {
-    if (message.content.startsWith(prefix + "welcome")) {
-	    let kickChannel = message.guild.channels.find(`name`, "announcements").send("We thank you for being in Toasty Giveaways. Run ;start to begin! :joy:");
-
+    if (message.content.startsWith(prefix + "startup")) {
+	    let kickChannel = message.guild.channels.find(`name`, "announcements").send("Hello! I am the new USA Bot created by LightBoltex. Run ;start to begin! :joy:");
 	}
 	})
     //////////////
